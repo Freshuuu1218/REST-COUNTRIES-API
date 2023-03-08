@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+/* variables */
+:root{
+    --dark-element: hsl(209, 23%, 22%);
+    --dark-background: hsl(207, 26%, 17%);
+    --light-text: hsl(200, 15%, 8%);
+    --light-input: hsl(0, 0%, 52%);
+    --light-background: hsl(0, 0%, 98%);
+    --dark-text-light-element: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--dark-background);
+    font-family: 'Nunito Sans', sans-serif;
+}
+header{
+    background-color: var(--dark-element);
+    color: var(--dark-text-light-element);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.75em 1em;
+    margin-bottom: 1.5em;
+}
+header h1{
+    font-size: .85em;
+    font-weight: 600;
+}
+header .modeSwitch{
+    display: flex;
+    align-items: center;
+}
+header .modeSwitch input{
+    display: none;
+}
+header .modeSwitch p{
+    font-size: .75em;
+    margin-left: .75em;
+}
+#searchFilter{
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+}
+#searchFilter i{
+    color: var(--dark-text-light-element);
+    position: absolute;
+    top: 7.35em;
+    left: 2.25em;
+}
+#searchFilter input{
+    position: relative;
+    background-color: var(--dark-element);
+    color: var(--dark-text-light-element);
+    border: 0;
+    padding: 1.25em 0 1.25em 5em;
+    font-size: .8em;
+    border-radius: .5em;
+    margin-bottom: 3em;
+}
+#searchFilter input::placeholder{
+    color: var(--dark-text-light-element);
+    font-size: .8em;
+}
+#searchFilter select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60%;
+    background-color: var(--dark-element);
+    color: var(--dark-text-light-element);
+    border: 0;
+    border-radius: .5em;
+    padding: 1em 1.5em;
+    background-image: url('./images/chevron-down-solid.svg');
+    background-repeat: no-repeat;
+    background-size: 30% 30%;
+    background-position: 104% center;
+}
+#searchFilter select:active,
+#searchFilter select:focus{
+    outline: 0;
+}
+
+#flags{
+    padding: 3em;
+}
+.flag{
+    width: 100%;
+    border-radius: .5em;
+    overflow: hidden;
+}
+.flag:hover{
+    transform: scale(1.1);
+}
+.flag .top img{
+    width: 100%;
+}
+.flag .bottom {
+    margin-top: -.75em;
+    background-color: var(--dark-element);
+    color: var(--dark-text-light-element);
+    padding: 1.5em 1.5em 3em;
+}
+.flag .bottom h2{
+    font-size: 1.25em;
+    font-weight: 800;
+    margin-bottom: .75em;
+}
+.flag .bottom strong{
+    font-weight: 600;
+}
+.flag .bottom p{
+    font-size: .85em;
+}
+.flag .bottom p:nth-child(3){
+    margin: .35em 0;
+}
