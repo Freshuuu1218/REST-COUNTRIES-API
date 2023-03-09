@@ -2,6 +2,9 @@ const flags = document.querySelector('#flags');
 const filter = document.querySelector('#filter');
 const country = document.querySelector('#name');
 const options = document.querySelectorAll('option');
+const modeSwitch = document.querySelector('#modeSwitch');
+const root = document.querySelector(':root');
+const moon = document.querySelector('header label');
     //display on start
     fetch(`https://restcountries.com/v3.1/all`)
     .then(response => response.json())
@@ -37,7 +40,7 @@ const options = document.querySelectorAll('option');
     })
 
 
-
+// function for create and display country
 function show(data) {
     flags.innerHTML = ""
     data.forEach(country =>{
@@ -59,6 +62,24 @@ function show(data) {
                         <p><strong>Capital:</strong> ${countryCapital}</p>
                     </div>`;
         flags.appendChild(flag);
-
     })
 }
+
+// theme switch
+modeSwitch.addEventListener('input',()=>{
+    if(modeSwitch.checked){
+        root.style.setProperty('--element','hsl(209, 23%, 22%)')
+        root.style.setProperty('--background','hsl(207, 26%, 17%)')
+        root.style.setProperty('--text','hsl(0, 0%, 100%)')
+        root.style.setProperty('--input','hsl(0, 0%, 100%)')
+        moon.innerHTML = '<i class="fas fa-moon"></i>'
+
+    }else{
+        root.style.setProperty('--element','hsl(0, 0%, 100%)')
+        root.style.setProperty('--background','hsl(0, 0%, 98%)')
+        root.style.setProperty('--text','hsl(200, 15%, 8%)')
+        root.style.setProperty('--input','hsl(0, 0%, 52%)')
+        moon.innerHTML = '<i class="far fa-moon"></i>'
+
+    }
+})

@@ -1,29 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 /* variables */
-:root{
-    --dark-element: hsl(209, 23%, 22%);
-    --dark-background: hsl(207, 26%, 17%);
-    --light-text: hsl(200, 15%, 8%);
-    --light-input: hsl(0, 0%, 52%);
-    --light-background: hsl(0, 0%, 98%);
-    --dark-text-light-element: hsl(0, 0%, 100%);
-}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: var(--dark-background);
+    background-color: var(--background);
     font-family: 'Nunito Sans', sans-serif;
 }
 header{
-    background-color: var(--dark-element);
-    color: var(--dark-text-light-element);
+    background-color: var(--element);
+    color: var(--text);
     display: flex;
     justify-content: space-between;
     padding: 1.75em 1em;
     margin-bottom: 1.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
 header h1{
     font-size: .85em;
@@ -46,15 +40,16 @@ header .modeSwitch p{
     flex-direction: column;
 }
 #searchFilter i{
-    color: var(--dark-text-light-element);
+    color: var(--text);
     position: absolute;
     top: 7.35em;
     left: 2.25em;
 }
 #searchFilter input{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     position: relative;
-    background-color: var(--dark-element);
-    color: var(--dark-text-light-element);
+    background-color: var(--element);
+    color: var(--input);
     border: 0;
     padding: 1.25em 0 1.25em 5em;
     font-size: .8em;
@@ -62,16 +57,17 @@ header .modeSwitch p{
     margin-bottom: 3em;
 }
 #searchFilter input::placeholder{
-    color: var(--dark-text-light-element);
+    color: var(--text);
     font-size: .8em;
 }
 #searchFilter select{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     width: 60%;
-    background-color: var(--dark-element);
-    color: var(--dark-text-light-element);
+    background-color: var(--element);
+    color: var(--text);
     border: 0;
     border-radius: .5em;
     padding: 1em 1.5em;
@@ -93,17 +89,24 @@ header .modeSwitch p{
     border-radius: .5em;
     overflow: hidden;
     margin-bottom: 3em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 .flag:hover{
     transform: scale(1.1);
 }
+.flag .top{
+    height: 10em;
+    overflow: hidden;
+}
 .flag .top img{
     width: 100%;
+    object-fit: cover;
+    height: 10em;
 }
 .flag .bottom {
     margin-top: -.75em;
-    background-color: var(--dark-element);
-    color: var(--dark-text-light-element);
+    background-color: var(--element);
+    color: var(--text);
     padding: 1.5em 1.5em 3em;
 }
 .flag .bottom h2{
