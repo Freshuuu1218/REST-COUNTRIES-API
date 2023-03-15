@@ -117,27 +117,33 @@ function showDetails(data){
                 <i class="fas fa-arrow-left"></i>
                 <span>Back</span>
             </button>
-            <div class="details-flag">
-                <img src="${countryFlag}" alt="flag">
-            </div>
-            <div class="details-info">
-                <h2>${countryName}</h2>
-                <div class="first-section">
-                    <p><span>Native Name: </span>${nativeName}</p>
-                    <p><span>Population: </span>${countryPopulation}</p>
-                    <p><span>Region: </span>${countryRegion}</p>
-                    <p><span>Sub Region: </span>${countrySubregion}</p>
-                    <p><span>Capital: </span>${countryCapital}</p>
+            <div class="details-content">
+                <div class="details-flag">
+                    <img src="${countryFlag}" alt="flag">
                 </div>
-                <div>
-                    <p><span>Top Level Domain: </span> ${tld}</p>
-                    <p><span>Currencies: </span> ${countryCurrency}</p>
-                    <p><span>Languages: </span> ${countryLanguages}</p>
+                <div class="details-data">
+                    <div class="details-info">
+                        <h2>${countryName}</h2>
+                        <div class="country-info">
+                            <div class="first-section">
+                                <p><span>Native Name: </span>${nativeName}</p>
+                                <p><span>Population: </span>${countryPopulation}</p>
+                                <p><span>Region: </span>${countryRegion}</p>
+                                <p><span>Sub Region: </span>${countrySubregion}</p>
+                                <p><span>Capital: </span>${countryCapital}</p>
+                            </div>
+                            <div class="second-section">
+                                <p><span>Top Level Domain: </span> ${tld}</p>
+                                <p><span>Currencies: </span> ${countryCurrency}</p>
+                                <p><span>Languages: </span> ${countryLanguages}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-borders">
+                        <strong>Border Countries: </strong>
+                        <div class="boxes"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="details-borders">
-                <strong>Border Countries: </strong>
-                <div class="boxes"></div>
             </div>`
     //borders
     const bordesBoxes = document.querySelector('.boxes')

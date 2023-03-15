@@ -108,7 +108,7 @@ header .modeSwitch p{
     margin-top: -.75em;
     background-color: var(--element);
     color: var(--text);
-    padding: 1.5em 1.5em 3em;
+    padding: 2.2em 1.5em 2.8em;
 }
 .flag .bottom h2{
     font-size: 1.25em;
@@ -190,4 +190,117 @@ header .modeSwitch p{
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     padding: .25em 0;
     font-size: .85em;
+}
+@media(min-width: 768px){
+    header {
+        padding: 1.5em 5em;
+        margin-bottom: 3em;
+    }
+    header h1 {
+        font-size: 1.5em;
+        font-weight: 800;
+    }
+    header .modeSwitch p {
+        font-size: 1em;
+        font-weight: 600;
+    }
+    main{
+        padding: 0 5em;
+    }
+    /* all flags panel */
+    #searchFilter {
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+    #searchFilter i {
+        top: 9.25em;
+        left: 6em;
+        opacity: .5;
+    }
+    #searchFilter input {
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        padding: 1.65em 0 1.65em 5em;
+        font-size: .8em;
+        margin-bottom: 3em;
+        width: 40%;
+    }
+    #searchFilter input:focus{
+        outline: 0;
+    }
+    #searchFilter input:focus + i{
+        opacity: 1;
+    }
+    #searchFilter input::placeholder {
+        opacity: .5;
+        font-size: 1em;
+    }  
+    #searchFilter select {
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        width: 15%;
+        height: 4.2925em;
+        padding: 0 1.5em;
+        background-size: 20% 20%;
+        background-position: 93% center;
+    }
+
+    #flags {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 4.5em;
+        row-gap: 4.5em;
+    }
+    .flag {
+        margin-bottom: 0;
+    }
+    .flag:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    .flag .bottom {
+        padding: 2.2em 1.5em 2.8em;
+    }
+        #details {
+            padding: 2em 0 5em 0;
+        }
+        .back {
+            border-radius: .5em;
+            padding: .5em 2.5em;
+            font-size: 1em;
+        }
+        .details-content{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .details-flag {
+            height: auto;
+            width: 40%;
+            margin-bottom: 0;
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, .1));
+        }
+    
+        .details-flag img {
+            object-fit: contain;
+        }
+        .details-data{
+            width: 45%;
+        }
+        .country-info{
+            display: flex;
+        }
+        .details-info h2 {
+            font-size: 2em;
+        }
+        .first-section{
+            margin-right: 5em;
+        }
+        .details-info p{
+            font-size: 1em;
+        }
+        .details-info div {
+            margin-bottom: 1em;
+        }
 }
