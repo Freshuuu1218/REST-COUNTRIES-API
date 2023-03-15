@@ -136,10 +136,11 @@ function showDetails(data){
                 </div>
             </div>
             <div class="details-borders">
-
+                <strong>Border Countries: </strong>
+                <div class="boxes"></div>
             </div>`
     //borders
-    const bordesBoxes = document.querySelector('.details-borders')
+    const bordesBoxes = document.querySelector('.boxes')
     let borders = data[count].borders
     borders.forEach(border=>{
         let borderBox = document.createElement('div')
@@ -151,6 +152,15 @@ function showDetails(data){
             .then(response => response.json())
             .then(data=>showDetails(data))
         })
+    })
+    //back button
+    const back = document.querySelector('button.back')
+    back.addEventListener('click',()=>{
+            fetch(`https://restcountries.com/v3.1/all`)
+            .then(response => response.json())
+            .then(data=>show(data))
+            allFlags.style.display='block';
+            details.style.display='none';
     })
 
     
