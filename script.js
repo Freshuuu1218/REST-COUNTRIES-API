@@ -1,5 +1,6 @@
 const flags = document.querySelector('#flags');
 const filter = document.querySelector('#filter');
+const filterBox = document.querySelector('#searchFilter select')
 const country = document.querySelector('#name');
 const options = document.querySelectorAll('option');
 const modeSwitch = document.querySelector('#modeSwitch');
@@ -147,8 +148,11 @@ function showDetails(data){
             </div>`
     //borders
     const bordesBoxes = document.querySelector('.boxes')
-    let borders = data[count].borders
-    borders.forEach(border=>{
+    let borders = data[count].borders;
+    if(!borders){
+        borders = '';
+    }else{
+        borders.forEach(border=>{
         let borderBox = document.createElement('div')
         borderBox.classList.add('borderBox');
         borderBox.innerHTML = border
@@ -159,6 +163,8 @@ function showDetails(data){
             .then(data=>showDetails(data))
         })
     })
+    }
+    
     //back button
     const back = document.querySelector('button.back')
     back.addEventListener('click',()=>{
@@ -180,13 +186,16 @@ modeSwitch.addEventListener('input',()=>{
         root.style.setProperty('--text','hsl(0, 0%, 100%)')
         root.style.setProperty('--input','hsl(0, 0%, 100%)')
         moon.innerHTML = '<i class="fas fa-moon"></i>'
-
+        filterBox.style.setProperty('background-image','url("./images/chevron-down-solid.svg")')
+        
     }else{
         root.style.setProperty('--element','hsl(0, 0%, 100%)')
         root.style.setProperty('--background','hsl(0, 0%, 98%)')
         root.style.setProperty('--text','hsl(200, 15%, 8%)')
         root.style.setProperty('--input','hsl(0, 0%, 52%)')
         moon.innerHTML = '<i class="far fa-moon"></i>'
+        filterBox.style.setProperty('background-image','url("./images/chevron-down-solid-dark.svg")')
+        
 
     }
 })

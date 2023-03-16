@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
-/* variables */
-
 *{
     margin: 0;
     padding: 0;
@@ -26,6 +24,9 @@ header h1{
 header .modeSwitch{
     display: flex;
     align-items: center;
+}
+header .modeSwitch label{
+    cursor: pointer;
 }
 header .modeSwitch input{
     display: none;
@@ -72,10 +73,13 @@ header .modeSwitch p{
     border: 0;
     border-radius: .5em;
     padding: 1em 1.5em;
-    background-image: url('./images/chevron-down-solid.svg');
+    background-image: url('./images/chevron-down-solid-dark.svg');
     background-repeat: no-repeat;
     background-size: 30% 30%;
     background-position: 104% center;
+}
+#searchFilter select:hover{
+    cursor: pointer;
 }
 #searchFilter select:active,
 #searchFilter select:focus{
@@ -191,6 +195,10 @@ header .modeSwitch p{
     padding: .25em 0;
     font-size: .85em;
 }
+.borderBox:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+}
 @media(min-width: 768px){
     header {
         padding: 1.5em 5em;
@@ -243,7 +251,6 @@ header .modeSwitch p{
         background-size: 20% 20%;
         background-position: 93% center;
     }
-
     #flags {
         padding: 0;
         display: grid;
@@ -261,46 +268,48 @@ header .modeSwitch p{
     .flag .bottom {
         padding: 2.2em 1.5em 2.8em;
     }
-        #details {
-            padding: 2em 0 5em 0;
-        }
-        .back {
-            border-radius: .5em;
-            padding: .5em 2.5em;
-            font-size: 1em;
-        }
-        .details-content{
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .details-flag {
-            height: auto;
-            width: 40%;
-            margin-bottom: 0;
-            filter: drop-shadow(0 0 5px rgba(0, 0, 0, .1));
-        }
-    
-        .details-flag img {
-            object-fit: contain;
-        }
-        .details-data{
-            width: 45%;
-        }
-        .country-info{
-            display: flex;
-        }
-        .details-info h2 {
-            font-size: 2em;
-        }
-        .first-section{
-            margin-right: 5em;
-        }
-        .details-info p{
-            font-size: 1em;
-        }
-        .details-info div {
-            margin-bottom: 1em;
-        }
+    #details {
+        padding: 2em 0 5em 0;
+    }
+    .back {
+        border-radius: .5em;
+        padding: .5em 2.5em;
+        font-size: 1em;
+    }
+    .back:hover{
+        cursor: pointer;
+    }
+    .details-content{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .details-flag {
+        height: auto;
+        width: 40%;
+        margin-bottom: 0;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, .1));
+    }
+    .details-flag img {
+        object-fit: contain;
+    }
+    .details-data{
+        width: 45%;
+    }
+    .country-info{
+        display: flex;
+    }
+    .details-info h2 {
+        font-size: 2em;
+    }
+    .first-section{
+        margin-right: 5em;
+    }
+    .details-info p{
+        font-size: 1em;
+    }
+    .details-info div {
+        margin-bottom: 1em;
+    }
 }
